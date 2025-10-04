@@ -4,7 +4,6 @@ import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Heart, Mail, Headphones, Smile, Play, Pause } from 'lucide-react';
 import BackgroundParticles from '@/components/background-particles';
 import Confetti from '@/components/confetti';
@@ -66,31 +65,25 @@ export default function BirthdayPageClient() {
       <section ref={galleryRef} id="gallery" className="py-20">
         <div className="w-full max-w-5xl text-center">
             <h2 className="font-headline text-4xl md:text-5xl text-primary mb-12">A Trip Down Memory Lane</h2>
-            <Carousel opts={{ loop: true }} className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto">
-              <CarouselContent>
-                {PlaceHolderImages.map((img) => (
-                  <CarouselItem key={img.id} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1 group">
-                      <Card className="overflow-hidden bg-white/20 dark:bg-black/20 backdrop-blur-md border-primary/20 transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/20">
-                        <CardContent className="flex aspect-[3/4] items-center justify-center p-0 relative">
-                           <Image
-                            src={img.imageUrl}
-                            alt={img.description}
-                            fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-110"
-                            data-ai-hint={img.imageHint}
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                          <p className="absolute bottom-4 left-4 font-headline text-lg text-white">{img.description}</p>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden sm:flex" />
-              <CarouselNext className="hidden sm:flex" />
-            </Carousel>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4">
+              {PlaceHolderImages.map((img, index) => (
+                <div key={img.id} className={`group ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
+                  <Card className="overflow-hidden bg-white/20 dark:bg-black/20 backdrop-blur-md border-primary/20 transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/20 h-full">
+                    <CardContent className="flex aspect-video md:aspect-auto items-center justify-center p-0 relative h-full">
+                       <Image
+                        src={img.imageUrl}
+                        alt={img.description}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        data-ai-hint={img.imageHint}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <p className="absolute bottom-4 left-4 font-headline text-lg text-white">{img.description}</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              ))}
+            </div>
         </div>
       </section>
 
