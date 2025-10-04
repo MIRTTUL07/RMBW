@@ -65,14 +65,15 @@ export default function BirthdayPageClient() {
       <section ref={galleryRef} id="gallery" className="py-20">
         <div className="w-full max-w-7xl text-center">
           <h2 className="font-headline text-4xl md:text-5xl text-primary mb-12">A Trip Down Memory Lane</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-2 px-2">
+          <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-4 gap-2 px-2 h-[calc(100vh-10rem)] max-h-[1000px]">
             {PlaceHolderImages.map((img, index) => {
               const collageClasses = [
-                'md:col-span-2 md:row-span-2 aspect-[4/3]', // childhood-1
-                'md:col-span-1 aspect-[3/4]', // queen-1
-                'md:col-span-1 aspect-[3/4]', // aai-and-me-1
-                'md:col-span-2 aspect-[16/9]', // family-1
-                'md:col-span-2 aspect-[16/9]', // smile-1
+                'md:col-span-1 md:row-span-2', // childhood-1
+                'md:col-span-1 md:row-span-2', // queen-1
+                'md:col-span-1 md:row-span-4', // aai-and-me-1
+                'md:col-span-1 md:row-span-2', // family-1
+                'md:col-span-1 md:row-span-2', // smile-1
+                'md:col-span-2 md:row-span-2', // happy-mother-1
               ];
               return (
                 <div key={img.id} className={`group ${collageClasses[index] || ''}`}>

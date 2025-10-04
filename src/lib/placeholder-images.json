@@ -29,6 +29,12 @@
       "description": "Her Beautiful Smile",
       "imageUrl": "https://images.unsplash.com/photo-1719087358997-12957d0859e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx3b21hbiUyMHNtaWxpbmd8ZW58MHx8fHwxNzU5NTQ4MjA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "woman smiling"
+    },
+    {
+      "id": "happy-mother-1",
+      "description": "Happy Mother",
+      "imageUrl": "https://images.unsplash.com/photo-1593030679284-234e9a935427?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoYXBweSUyMG1vdGhlcnxlbnwwfHx8fDE3NTk2MDM0ODZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "happy mother"
     }
   ]
 }
