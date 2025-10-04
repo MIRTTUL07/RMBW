@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Heart, Mail, Headphones, Smile, Play, Pause } from 'lucide-react';
+import { Heart, Mail, Smile, Play, Pause } from 'lucide-react';
 import BackgroundParticles from '@/components/background-particles';
 import Confetti from '@/components/confetti';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -63,14 +63,22 @@ export default function BirthdayPageClient() {
       
       {/* Gallery Section */}
       <section ref={galleryRef} id="gallery" className="py-20">
-        <div className="w-full max-w-5xl text-center">
-            <h2 className="font-headline text-4xl md:text-5xl text-primary mb-12">A Trip Down Memory Lane</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 px-4">
-              {PlaceHolderImages.map((img, index) => (
-                <div key={img.id} className={`group ${index === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}>
+        <div className="w-full max-w-7xl text-center">
+          <h2 className="font-headline text-4xl md:text-5xl text-primary mb-12">A Trip Down Memory Lane</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-4 px-4">
+            {PlaceHolderImages.map((img, index) => {
+              const collageClasses = [
+                'md:col-span-2 md:row-span-2 aspect-[4/3]', // childhood-1
+                'md:col-span-1 aspect-[3/4]', // queen-1
+                'md:col-span-1 aspect-[3/4]', // aai-and-me-1
+                'md:col-span-2 aspect-[16/9]', // family-1
+                'md:col-span-2 aspect-[16/9]', // smile-1
+              ];
+              return (
+                <div key={img.id} className={`group ${collageClasses[index] || ''}`}>
                   <Card className="overflow-hidden bg-white/20 dark:bg-black/20 backdrop-blur-md border-primary/20 transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/20 h-full">
-                    <CardContent className="flex aspect-video md:aspect-auto items-center justify-center p-0 relative h-full">
-                       <Image
+                    <CardContent className="p-0 relative h-full">
+                      <Image
                         src={img.imageUrl}
                         alt={img.description}
                         fill
@@ -82,8 +90,9 @@ export default function BirthdayPageClient() {
                     </CardContent>
                   </Card>
                 </div>
-              ))}
-            </div>
+              )
+            })}
+          </div>
         </div>
       </section>
 
