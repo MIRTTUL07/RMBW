@@ -1,3 +1,9 @@
+import BirthdayPageClient from "@/components/birthday-page-client";
+
 export default function Home() {
-  return <></>;
+  return (
+    <main>
+      <BirthdayPageClient />
+    </main>
+  );
 }
