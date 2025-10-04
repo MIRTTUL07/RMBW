@@ -51,10 +51,12 @@ export default function BirthdayPageClient() {
         <Card className="w-full max-w-4xl bg-white/20 dark:bg-black/20 backdrop-blur-lg border-primary/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:shadow-primary/20 hover:border-primary/40">
           <CardContent className="p-8 md:p-12">
             <p className="font-headline text-3xl md:text-4xl leading-relaxed text-center text-foreground">
-              आई, तुझं प्रेम माझं जग आहे. मी कॉलेजमध्ये दूर आहे, पण प्रत्येक दिवस तुझी आठवण येते.
+              I just wanted to take a moment to tell you how much I miss you. Being in the hostel makes me realize every day how much comfort, love, and care you bring into my life. Thank you for everything you do — your support, your cooking, your hugs, and your endless love.
+
+Even though I’m far away, you’re always in my heart. Wishing you a beautiful day, Mom. Take care of yourself and know that I love you more than words can say. 🌸💖
               <br/>
               <span className="font-body text-2xl md:text-3xl mt-4 block">
-                Happy Birthday Aai — you are my superhero. ❤️
+                Happy Birthday Aai — you are my Queen❤️
               </span>
             </p>
           </CardContent>
@@ -110,17 +112,12 @@ export default function BirthdayPageClient() {
               "तुझं प्रेम हे माझं प्रेरणास्थान आहे 💕"
             </p>
             <Button size="lg" onClick={handleConfetti} className="rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-shadow duration-300">
-                Send me your smile 😊 <Smile className="ml-2" />
+                Send me your kisses 😘 <Smile className="ml-2" />
             </Button>
         </div>
       </section>
       
       {/* Footer */}
-      <footer className="w-full text-center p-8 bg-background/50 border-t border-border">
-        <p className="font-body text-foreground/70">
-          Coded with infinite love <Heart className="inline-block h-4 w-4 text-primary" fill="currentColor" /> — तुझा मुलगा, मिर्त्तुल.
-        </p>
-      </footer>
     </div>
   );
 }
@@ -134,7 +131,7 @@ function VoiceWish() {
         // We only want to create the audio element on the client side
         if (typeof window !== 'undefined' && !audioRef.current) {
             // NOTE: Add a real audio file to public/audio/voice-wish.mp3 for this to work
-            audioRef.current = new Audio('/audio/voice-wish.mp3');
+            audioRef.current = new Audio('/audio/audio.opus');
             audioRef.current.onended = () => setIsPlaying(false);
         }
         

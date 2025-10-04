@@ -2,43 +2,43 @@
   "placeholderImages": [
     {
       "id": "childhood-1",
-      "description": "My Childhood",
-      "imageUrl": "/images/image-1.jpg",
+      "description": "",
+      "imageUrl": "/images/image-1.png",
       "imageHint": "child mother"
     },
     {
       "id": "queen-1",
-      "description": "My Queen 👑",
+      "description": "",
       "imageUrl": "/images/image-2.jpg",
       "imageHint": "woman portrait"
     },
     {
       "id": "aai-and-me-1",
-      "description": "Aai & Me",
+      "description": "",
       "imageUrl": "/images/image-3.jpg",
       "imageHint": "mother son"
     },
     {
       "id": "family-1",
-      "description": "Our Family",
+      "description": "",
       "imageUrl": "/images/image-4.jpg",
       "imageHint": "happy family"
     },
     {
       "id": "smile-1",
-      "description": "Her Beautiful Smile",
+      "description": "",
       "imageUrl": "/images/image-5.jpg",
       "imageHint": "woman smiling"
     },
     {
       "id": "happy-mother-1",
-      "description": "Happy Mother",
+      "description": "",
       "imageUrl": "/images/image-6.jpg",
       "imageHint": "happy mother"
     },
     {
       "id": "always-there",
-      "description": "Always there for me",
+      "description": "",
       "imageUrl": "/images/image-7.jpg",
       "imageHint": "mother holding hands"
     }
