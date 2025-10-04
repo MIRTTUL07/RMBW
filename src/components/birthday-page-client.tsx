@@ -65,7 +65,7 @@ export default function BirthdayPageClient() {
       <section ref={galleryRef} id="gallery" className="py-20">
         <div className="w-full max-w-7xl text-center">
           <h2 className="font-headline text-4xl md:text-5xl text-primary mb-12">A Trip Down Memory Lane</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-4 px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-2 px-2">
             {PlaceHolderImages.map((img, index) => {
               const collageClasses = [
                 'md:col-span-2 md:row-span-2 aspect-[4/3]', // childhood-1
