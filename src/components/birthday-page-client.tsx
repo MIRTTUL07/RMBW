@@ -32,7 +32,7 @@ export default function BirthdayPageClient() {
       {showConfetti && <Confetti />}
       
       {/* Hero Section */}
-      <section id="home" className="h-screen min-h-screen border-0">
+      <section id="home" className="h-screen min-h-screen">
         <div className="text-center flex flex-col items-center gap-8 animate-fade-in">
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl text-primary" style={{ textShadow: '0 0 15px hsl(var(--primary)), 0 0 25px hsl(var(--primary))' }}>
             आई, वाढदिवसाच्या हार्दिक शुभेच्छा 💖
@@ -47,7 +47,7 @@ export default function BirthdayPageClient() {
       </section>
 
       {/* Message Section */}
-      <section ref={messageRef} id="message" className="border-0">
+      <section ref={messageRef} id="message">
         <Card className="w-full max-w-4xl bg-white/20 dark:bg-black/20 backdrop-blur-lg border-primary/20 shadow-2xl shadow-primary/10 transition-all duration-500 hover:shadow-primary/20 hover:border-primary/40">
           <CardContent className="p-8 md:p-12">
             <p className="font-headline text-3xl md:text-4xl leading-relaxed text-center text-foreground">
@@ -62,18 +62,19 @@ export default function BirthdayPageClient() {
       </section>
       
       {/* Gallery Section */}
-      <section ref={galleryRef} id="gallery" className="py-20 border-0">
+      <section ref={galleryRef} id="gallery" className="py-20">
         <div className="w-full max-w-7xl text-center">
           <h2 className="font-headline text-4xl md:text-5xl text-primary mb-12">A Trip Down Memory Lane</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 md:grid-rows-4 gap-2 px-2 h-[calc(100vh-10rem)] max-h-[1000px]">
-            {PlaceHolderImages.map((img, index) => {
+          <div className="grid grid-cols-2 md:grid-cols-4 md:grid-rows-3 gap-2 px-2 h-[calc(100vh-10rem)] max-h-[1000px]">
+            {PlaceHolderImages.slice(0, 7).map((img, index) => {
               const collageClasses = [
-                'md:col-span-1 md:row-span-2', // childhood-1
-                'md:col-span-1 md:row-span-2', // queen-1
-                'md:col-span-1 md:row-span-4', // aai-and-me-1
-                'md:col-span-1 md:row-span-2', // family-1
-                'md:col-span-1 md:row-span-2', // smile-1
-                'md:col-span-2 md:row-span-2', // happy-mother-1
+                'md:col-span-2 md:row-span-1',
+                'md:col-span-1 md:row-span-1',
+                'md:col-span-1 md:row-span-2',
+                'md:col-span-1 md:row-span-1',
+                'md:col-span-2 md:row-span-2',
+                'md:col-span-1 md:row-span-1',
+                'md:col-span-1 md:row-span-1',
               ];
               return (
                 <div key={img.id} className={`group ${collageClasses[index] || ''}`}>
@@ -98,12 +99,12 @@ export default function BirthdayPageClient() {
       </section>
 
       {/* Voice Wish Section */}
-      <section ref={voiceRef} id="voice-wish" className="border-0">
+      <section ref={voiceRef} id="voice-wish">
         <VoiceWish />
       </section>
 
       {/* Final Section */}
-      <section ref={finalRef} id="final" className="border-0">
+      <section ref={finalRef} id="final">
         <div className="text-center flex flex-col items-center gap-8">
             <p className="font-headline text-4xl md:text-6xl text-primary" style={{ textShadow: '0 0 10px hsl(var(--primary))' }}>
               "तुझं प्रेम हे माझं प्रेरणास्थान आहे 💕"
